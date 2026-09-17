@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyagrBot Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .mermaid {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>🌍 VoyagrBot: Multi-Agent Architecture</h2>
+    
+    <div class="mermaid">
+        graph TD
+            UI[🖥️ Streamlit Frontend] -->|User Input: Origin, Dest, Dates, Budget| TM{🧠 TripManager Orchestrator}
+            
+            TM -->|1. Parse Needs| MP[🤖 MasterPlanner Agent]
+            TM -->|2. Get Weather| CA[☁️ Climate Agent]
+            TM -->|3. Get Flights & Stays| LA[✈️ Logistics Agent <br> Amadeus API]
+            TM -->|4. Get Local Transit| GA[🚆 GroundTransport Agent <br> RapidAPI]
+            TM -->|5. Get Sights/Restaurants| PA[📸 SearchPOI Agent <br> TripAdvisor & Booking]
+            
+            MP -.->|Routing Guide| TM
+            CA -.->|Forecasts| TM
+            LA -.->|Live Hotels & Flights| TM
+            GA -.->|Train/Bus Routes| TM
+            PA -.->|POIs & Coordinates| TM
+            
+            TM -->|6. Calculate Remaining Budget| BA((💰 Budget Engine))
+            BA -->|7. Squashed Daily Allowance| BIA[📅 BudgetItinerary Agent]
+            
+            BIA -->|8. Hourly Day-by-Day Timeline| TM
+            TM -->|Assemble Master JSON| UI
+            
+            UI -->|Render| MAP[🗺️ Folium Map]
+            UI -->|Generate| ZIP[📦 Zip Exporter]
+            UI -->|Render| UI_Timeline[📜 UI Timeline & Costs]
+            
+            style UI fill:#ff9999,stroke:#333,stroke-width:2px
+            style TM fill:#f9f,stroke:#333,stroke-width:4px
+            style MP fill:#bbf,stroke:#333,stroke-width:2px
+            style CA fill:#bbf,stroke:#333,stroke-width:2px
+            style LA fill:#bbf,stroke:#333,stroke-width:2px
+            style GA fill:#bbf,stroke:#333,stroke-width:2px
+            style PA fill:#bbf,stroke:#333,stroke-width:2px
+            style BA fill:#ffd700,stroke:#333,stroke-width:2px
+            style BIA fill:#bbf,stroke:#333,stroke-width:2px
+            style MAP fill:#dfd,stroke:#333,stroke-width:2px
+            style ZIP fill:#dfd,stroke:#333,stroke-width:2px
+            style UI_Timeline fill:#dfd,stroke:#333,stroke-width:2px
+    </div>
+    
+    <p style="margin-top: 20px; color: #666; font-size: 14px;">
+        💡 <strong>Tip:</strong> You can right-click the diagram above and select "Save image as..." or take a screenshot for your presentation!
+    </p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+streamlit
+amadeus
+tavily-python
+requests
+folium
+streamlit-folium
+python-dotenv
+openai
+fpdf
+google-genai
+pandas
+plotly

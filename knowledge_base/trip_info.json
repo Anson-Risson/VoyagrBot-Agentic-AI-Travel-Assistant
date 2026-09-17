@@ -1,0 +1,79 @@
+{
+  "safety_rules": [
+    {
+      "destination": "default",
+      "tips": [
+        "Keep digital copies of all travel documents.",
+        "Use authorized transportation services (Uber/Ola/official taxis).",
+        "Avoid displaying expensive jewelry or electronics in public.",
+        "Share your live location with family via Google Maps."
+      ]
+    },
+    {
+      "destination": "India",
+      "tips": [
+        "Drink only bottled or filtered water.",
+        "Respect local dress codes, especially at religious sites.",
+        "Watch out for common pickpockets in busy markets like Chandni Chowk or Colaba."
+      ]
+    },
+    {
+      "destination": "Paris",
+      "tips": [
+        "Be wary of 'string' or 'friendship bracelet' scams near Sacré-Cœur.",
+        "Keep your bag in front of you on the Metro.",
+        "Avoid the Gare du Nord area late at night if alone."
+      ]
+    }
+  ],
+  "packing_lists": [
+    {
+      "category": "General",
+      "items": ["Universal Power Adapter", "First Aid Kit", "Power Bank", "Reusable Water Bottle"]
+    },
+    {
+      "category": "Beach (Goa/Kerala)",
+      "items": ["Sunscreen", "Swimwear", "Flip-flops", "Quick-dry Towel"]
+    },
+    {
+      "category": "Mountain/Cold (Delhi/Himalayas in Winter)",
+      "items": ["Thermals", "Heavy Jacket", "Beanie", "Moisturizer"]
+    }
+  ],
+  "emergency_contacts": [
+    {
+      "destination": "India",
+      "police": "100",
+      "ambulance": "102",
+      "universal": "112"
+    },
+    {
+      "destination": "France",
+      "police": "17",
+      "medical": "15",
+      "universal": "112"
+    },
+    {
+      "destination": "USA",
+      "universal": "911"
+    },
+    {
+      "destination": "default",
+      "universal": "112"
+    }
+  ],
+  "visa_info": [
+    {
+      "route": "Domestic India",
+      "requirement": "No visa required for Indian citizens. Valid ID (Aadhar/Voter ID) is sufficient."
+    },
+    {
+      "route": "India to France",
+      "requirement": "Schengen Visa required. Apply at least 4 weeks in advance via VFS Global."
+    },
+    {
+      "route": "India to Dubai",
+      "requirement": "Pre-arranged or OK-on-board Visa/eVisa required for Indian passport holders."
+    }
+  ]
+}
