@@ -124,8 +124,7 @@ VoyagrBot was developed as a final-year project exploring agentic AI, multi-agen
 
 ## 👥 Team
 
-Add your final team-member names here.
-
-## 📜 License
-
-Add the license required by your project/college here.
+Anson Risson
+Cilla E J
+Josh Sunil
+Shyamprakash J
